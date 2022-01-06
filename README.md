@@ -4,7 +4,7 @@ This organization holds datalad versions of some of the datasets published in th
 
 Alternatively, you can access public datasets using webdav via <https://public.data.donders.ru.nl>.
 
-You can also access restricted access datasets via <https://webdav.data.donders.ru.nl>, this require registering, logging in and agreeing to the collection-specific Data Use Agreement (DUA). See [here](https://data.donders.ru.nl/doc/help/faq/access-shared-data.html) for instructions. The restricted access collections are not included here.
+You can also access restricted access datasets via <https://webdav.data.donders.ru.nl>, this require registering, logging in and explicitly agreeing to the collection-specific Data Use Agreement (DUA). See [here](https://data.donders.ru.nl/doc/help/faq/access-shared-data.html) for instructions. The restricted access collections are not included here.
 
 ## Getting all collections as submodules
 
