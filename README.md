@@ -22,7 +22,7 @@ See the [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) docume
 
 Subsequently you can download the specific files for a specific collection.
 
-    cd <datacollection_id>
+    cd <data…collection_id>
     datalad get 
 
 See the [datalad handbook](http://handbook.datalad.org/en/latest/) for more details or `datalad --help`.
