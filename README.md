@@ -11,6 +11,7 @@ You can also access restricted access datasets via <https://webdav.data.donders.
 You can checkout this repository, which includes all data collections as submodules.
 
     git clone https://github.com/Donders-Institute-Data/donders-institute-data.git
+    cd donders-institute-data
     git submodule init
     git submodule update
 
