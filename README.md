@@ -27,3 +27,74 @@ Subsequently you can download the specific files for a specific collection.
     datalad get 
 
 See the [datalad handbook](http://handbook.datalad.org/en/latest/) for more details or `datalad --help`.
+
+## Adding public collections
+
+I am using the following `manifest_to_datalad` script to create and add new datalad repositories.
+
+```
+#!/bin/bash
+#
+# Use as:
+#   manifest_to_datalad.sh <WEBDAVPREFIX> <GITHUBREPO>
+#
+# For example:
+#   manifest_to_datalad https://public.data.donders.ru.nl/dcc/DSC_2019.00036_099_v1 git@github.com:Donders-Institute-Data/dcc.DSC_2019.00036_099_v1
+#
+# This builds on http://datalad.org/ and https://github.com/cli/cli
+#
+# Note that this is not a very robust script
+
+WEBDAVPREFIX="$1"
+GITHUBREPO="$2"
+
+WEBDAVPREFIX=https://public.data.donders.ru.nl/dcc/DSC_2019.00036_099_v1
+GITHUBREPO=git@github.com:Donders-Institute-Data/test.git
+
+if [ -z "$WEBDAVPREFIX" -o -z "$GITHUBREPO" ] ; then
+echo Use as: $0 '<WEBDAVPREFIX> <GITHUBREPO>'
+exit 1
+fi
+
+# make a short name for the dataset
+DATASET=$(basename "$GITHUBREPO" .git)
+mkdir -p $DATASET
+cd $DATASET
+
+# these are downloaded prior to initializing the datalad dataset
+# to ensure that they are reporesented as files, not as links
+
+if [ ! -e MANIFEST.txt ] ; then datalad download-url "$WEBDAVPREFIX"/MANIFEST.txt ; fi
+if [ ! -e README.txt   ] ; then datalad download-url "$WEBDAVPREFIX"/README.txt   ; fi
+if [ ! -e LICENSE.txt  ] ; then datalad download-url "$WEBDAVPREFIX"/LICENSE.txt  ; fi
+
+gh repo create --public Donders-Institute-Data/"$DATASET"
+
+datalad create --force
+git add MANIFEST.txt README.txt LICENSE.txt && git commit -am "added general metadata files"
+
+cat MANIFEST.txt | while read LINE ; do
+  LINE=($LINE)
+  HASH=${LINE[@]:0:1}
+  FILE=${LINE[@]:1}
+  DIR=`dirname "$FILE"`
+  BASE=`basename "$FILE"`
+  if [ ! -e "$FILE" -a ! -L "$FILE" ]; then
+    if [ ! -z "$DIR" ] ; then
+      mkdir -p "$DIR"
+    fi
+    datalad download-url "$WEBDAVPREFIX"/"$FILE" -O "$FILE"
+    datalad drop "$FILE"
+  else
+    #echo skipping "$FILE"
+    echo -n
+  fi
+  if [ -e "$FILE" ] ; then
+    echo file "$FILE" is not a link
+  fi
+done
+
+git remote add origin "$GITHUBREPO"
+git push --set-upstream origin master
+datalad push --to origin
+```
