@@ -64,9 +64,9 @@ cd $DATASET
 # these are downloaded prior to initializing the datalad dataset
 # to ensure that they are reporesented as files, not as links
 
-if [ ! -e MANIFEST.txt ] ; then datalad download-url "$WEBDAVPREFIX"/MANIFEST.txt ; fi
-if [ ! -e README.txt   ] ; then datalad download-url "$WEBDAVPREFIX"/README.txt   ; fi
-if [ ! -e LICENSE.txt  ] ; then datalad download-url "$WEBDAVPREFIX"/LICENSE.txt  ; fi
+if [ ! -e MANIFEST.txt ] ; then wget "$WEBDAVPREFIX"/MANIFEST.txt ; fi
+if [ ! -e README.txt   ] ; then wget "$WEBDAVPREFIX"/README.txt   ; fi
+if [ ! -e LICENSE.txt  ] ; then wget "$WEBDAVPREFIX"/LICENSE.txt  ; fi
 
 gh repo create --public Donders-Institute-Data/"$DATASET"
 
