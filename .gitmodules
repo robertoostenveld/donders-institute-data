@@ -74,3 +74,8 @@
 	path = dcc.DSC_2020.00034_408_v2
 	url = https://github.com/Donders-Institute-Data/dcc.DSC_2020.00034_408_v2
 	datalad-url = https://github.com/Donders-Institute-Data/dcc.DSC_2020.00034_408_v2
+[submodule "dccn.DSC_3011053.05_685_v1"]
+	path = dccn.DSC_3011053.05_685_v1
+	url = https://github.com/Donders-Institute-Data/dccn.DSC_3011053.05_685_v1
+	datalad-id = f7721895-8560-4516-a876-b586b9bab34b
+	datalad-url = https://github.com/Donders-Institute-Data/dccn.DSC_3011053.05_685_v1
