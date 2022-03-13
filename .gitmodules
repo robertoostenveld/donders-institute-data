@@ -83,3 +83,8 @@
 	path = dccn.DSC_3013067.01_415_v1
 	url = https://github.com/Donders-Institute-Data/dccn.DSC_3013067.01_415_v1
 	datalad-url = https://github.com/Donders-Institute-Data/dccn.DSC_3013067.01_415_v1
+[submodule "dccn.DSC_3015000.00_677_v1"]
+	path = dccn.DSC_3015000.00_677_v1
+	url = https://github.com/Donders-Institute-Data/dccn.DSC_3015000.00_677_v1
+	datalad-id = 9bb089f9-5696-46ec-af40-8e5a7e214e4d
+	datalad-url = https://github.com/Donders-Institute-Data/dccn.DSC_3015000.00_677_v1
