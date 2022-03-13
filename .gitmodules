@@ -46,3 +46,7 @@
 	path = dcc.DSC_2016.00298_186_v1
 	url = https://github.com/Donders-Institute-Data/dcc.DSC_2016.00298_186_v1
 	datalad-url = https://github.com/Donders-Institute-Data/dcc.DSC_2016.00298_186_v1
+[submodule "dcc.DSC_2017.00054_259_v1"]
+	path = dcc.DSC_2017.00054_259_v1
+	url = https://github.com/Donders-Institute-Data/dcc.DSC_2017.00054_259_v1
+	datalad-url = https://github.com/Donders-Institute-Data/dcc.DSC_2017.00054_259_v1
