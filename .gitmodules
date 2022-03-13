@@ -89,3 +89,8 @@
 	url = https://github.com/Donders-Institute-Data/dcc.DSC_2018.00074_077_v1.git
 	datalad-id = 94332fa5-a718-4bfb-b357-adb3aaff0afa
 	datalad-url = https://github.com/Donders-Institute-Data/dcc.DSC_2018.00074_077_v1.git
+[submodule "dcc.DSC_2020.00134_473_v1"]
+	path = dcc.DSC_2020.00134_473_v1
+	url = https://github.com/Donders-Institute-Data/dcc.DSC_2020.00134_473_v1
+	datalad-id = 924d79ed-a681-4d5a-b503-d4f085089a83
+	datalad-url = https://github.com/Donders-Institute-Data/dcc.DSC_2020.00134_473_v1
