@@ -79,3 +79,8 @@
 [submodule "dcn.DSC_626810_0006_072_v1"]
 	path = dcn.DSC_626810_0006_072_v1
 	url = https://github.com/Donders-Institute-Data/dcn.DSC_626810_0006_072_v1.git
+[submodule "dcc.DSC_2017.00121_384_v1"]
+	path = dcc.DSC_2017.00121_384_v1
+	url = https://github.com/Donders-Institute-Data/dcc.DSC_2017.00121_384_v1.git
+	datalad-id = d7fd2d1a-a9ff-4cd2-beeb-6cd9e40e8041
+	datalad-url = https://github.com/Donders-Institute-Data/dcc.DSC_2017.00121_384_v1.git
