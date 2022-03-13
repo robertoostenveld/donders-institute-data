@@ -126,3 +126,7 @@
 	path = dcmn.DSC_0004546_823_v1
 	url = https://github.com/Donders-Institute-Data/dcmn.DSC_0004546_823_v1
 	datalad-url = https://github.com/Donders-Institute-Data/dcmn.DSC_0004546_823_v1
+[submodule "dcmn.DSC_4020000.10_922_v1"]
+	path = dcmn.DSC_4020000.10_922_v1
+	url = https://github.com/Donders-Institute-Data/dcmn.DSC_4020000.10_922_v1
+	datalad-url = https://github.com/Donders-Institute-Data/dcmn.DSC_4020000.10_922_v1
