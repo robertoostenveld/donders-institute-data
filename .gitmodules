@@ -70,3 +70,7 @@
 	path = dcc.DSC_2020.00034_408_v1
 	url = https://github.com/Donders-Institute-Data/dcc.DSC_2020.00034_408_v1
 	datalad-url = https://github.com/Donders-Institute-Data/dcc.DSC_2020.00034_408_v1
+[submodule "dcc.DSC_2020.00034_408_v2"]
+	path = dcc.DSC_2020.00034_408_v2
+	url = https://github.com/Donders-Institute-Data/dcc.DSC_2020.00034_408_v2
+	datalad-url = https://github.com/Donders-Institute-Data/dcc.DSC_2020.00034_408_v2
